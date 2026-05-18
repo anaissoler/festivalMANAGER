@@ -2,6 +2,20 @@
 
 > **GitHub:** [https://github.com/anaissoler/festivalMANAGER](https://github.com/anaissoler/festivalMANAGER)
 
+## How to run
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the full pipeline
+python main.py
+```
+
+Results are saved automatically in `results/` and `models/`. Figures are saved in `results/figuras/` as `.html` and `.png` files.
+
+---
+
 ## What is this project?
 
 Festival Manager is a Reinforcement Learning project where we train an AI agent to **plan and manage a music festival**.
@@ -102,20 +116,6 @@ Implements tabular Q-Learning from scratch using a `defaultdict` as the Q-table.
 | `epsilon` | 1.0 → 0.05 | Exploration rate — starts fully random, gradually exploits |
 | `epsilon_decay` | 0.995 | Decay per episode — converges after ~2000 episodes |
 | `n_episodes` | 2000 | Total training episodes per mode |
-
----
-
-## How to run
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the full pipeline
-python main.py
-```
-
-Results are saved automatically in `results/` and `models/`. Figures are saved in `results/figuras/` as `.html` and `.png` files.
 
 ---
 
@@ -470,11 +470,3 @@ train_all_modes()
 
 ---
 
-## Execution order in `main.py`
-
-| Step | Introduced in | What happens |
-|------|--------------|-------------|
-| **0** | Version 4 | Interactive BFS/DFS navigator — find routes between festival zones |
-| **1** | Version 1 | Q-Learning training — three agents trained (modes A, B, C) |
-| **2** | Version 1 | Evaluation — trained agents vs random baseline, metrics saved to CSV |
-| **3** | Version 1 | Visualisations — training curves, comparisons, heatmaps saved to `results/figuras/` |
