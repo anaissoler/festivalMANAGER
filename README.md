@@ -456,17 +456,5 @@ Both functions store the **full path** at each step (not just visited markers), 
 
 #### Integration in `main.py`
 
-`navigation.py` runs as **Step 0**, before Q-Learning training starts. The user can query as many routes as they want, then continue:
-
-```python
-# Step 0 — BFS vs DFS navigator
-from navigation import run_navigation
-run_navigation()
-
-# Step 1 — Q-Learning training
-from agent.train import train_all_modes
-train_all_modes()
-```
-
----
+`navigation.py` runs as **Step 0**, before Q-Learning training starts. The user can query as many routes as they want, then continue. 
 
